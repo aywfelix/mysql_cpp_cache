@@ -2,10 +2,10 @@
  * Filename: MySqlDB.h
  *                
  * Version:       
- * Author:        LaiJia <laijia2008@126.com>
+ * Author:        Addision <Addision2008@126.com>
  * Created at:    Tue Apr 12 14:26:12 2016
  *                
- * Description:   ½«Êı¾İ¿âÊı¾İ»º´æµ½ÄÚ´æ£¬Ä£Äâ¹ØÏµÊı¾İ¿â·½Ê½´æ´¢,¿ÉÒÔËæÒâ²éÕÒÄ³Ò»ĞĞ¼ÇÂ¼£¬Ä³Ò»ÁĞÊı¾İ
+ * Description:   å°†æ•°æ®åº“æ•°æ®ç¼“å­˜åˆ°å†…å­˜ï¼Œæ¨¡æ‹Ÿå…³ç³»æ•°æ®åº“æ–¹å¼å­˜å‚¨,å¯ä»¥éšæ„æŸ¥æ‰¾æŸä¸€è¡Œè®°å½•ï¼ŒæŸä¸€åˆ—æ•°æ®
  *
  */
 
@@ -31,7 +31,7 @@ class CRecordset;
 class CSqlString;
 class CConnection;
 
-//Í³Ò»ÀàĞÍµÄÒ»¸öÀà
+//ç»Ÿä¸€ç±»å‹çš„ä¸€ä¸ªç±»
 class CVariant
 {
 public:
@@ -47,7 +47,7 @@ public:
 	CVariant(bool var);
 	CVariant(time_t var);
 	CVariant(void* var, unsigned int len);
-	CVariant(CRecordset& var); //´ú±íÒ»Ìõ¼ÇÂ¼
+	CVariant(CRecordset& var); //ä»£è¡¨ä¸€æ¡è®°å½•
     virtual ~CVariant();
 
 	CVariant& operator=(const CVariant& var);
@@ -77,7 +77,7 @@ private:
 	VAR_TYPE m_type;	
 };
 
-//sqlÓï¾ä´¦ÀíÀà
+//sqlè¯­å¥å¤„ç†ç±»
 class CSqlString
 {
 public:
@@ -112,7 +112,7 @@ private:
 	string m_sql;
 };
 
-//Êı¾İ¿â´¦ÀíÀà
+//æ•°æ®åº“å¤„ç†ç±»
 
 class CConnection
 {
@@ -136,7 +136,7 @@ private:
 	MYSQL mysql;
 };
 
-//Êı¾İ¿â»º´æ´¦ÀíÀà
+//æ•°æ®åº“ç¼“å­˜å¤„ç†ç±»
 class CRecordset
 {
 public:
